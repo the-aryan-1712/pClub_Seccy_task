@@ -15,8 +15,9 @@ using namespace std;
 int main()
 {   
     ll(n);
+    
     cout<<n<<endl;
-    map<long long,int> mp;
+    unordered_map<long long,int> mp;
     for(long long i=n;i>0;i--){
         int count=0,flag=1;
         for( int j=2;    ;j++){
@@ -39,9 +40,10 @@ int main()
             mp[i]=0;
         }
     }
-    for(auto ele:mp){
-        if(ele.second==1){
-            cout<<ele.first<<" ";
+
+    for(int i=1;i<=n;i++){
+        if(mp.find(i)!=mp.end() && (*mp.find(i)).second==1){
+            cout<<(*mp.find(i)).first<<" ";
         }
     }
     return 0;
