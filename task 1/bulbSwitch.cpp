@@ -14,12 +14,12 @@ using namespace std;
 
 int main()
 {   
-    int(n);
+    ll(n);
     cout<<n<<endl;
-    map<int,int> mp;
-    for(int i=n;i>0;i--){
+    map<long long,int> mp;
+    for(long long i=n;i>0;i--){
         int count=0,flag=1;
-        for(int j=2;    ;j++){
+        for( int j=2;    ;j++){
             
             if(mp.find(i*j) == mp.end()){
                 
