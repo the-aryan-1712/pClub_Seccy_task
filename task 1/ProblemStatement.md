@@ -17,7 +17,7 @@ Input:
 6
 
 Output:
-6
+6<br>
 1 2 4 5 6
 
 <h1>Example 2</h1>
@@ -25,5 +25,5 @@ Input:
 10
 
 Output:
-10
+10<br>
 1 3 6 7 8 9 10
