@@ -13,17 +13,17 @@ The first and only line of code consists of a natural number N (0 < N < 10<sup>5
 The first line of output contains the maximum number of bulbs that can be lit up. And second line has the sequence of space-separated switch numbers in ascending order.
 
 <h1>Example 1</h1>
-Input:
+Input:<br>
 6
 
-Output:
+Output:<br>
 6<br>
 1 2 4 5 6
 
 <h1>Example 2</h1>
-Input:
+Input:<br>
 10
 
-Output:
+Output:<br>
 10<br>
 1 3 6 7 8 9 10
