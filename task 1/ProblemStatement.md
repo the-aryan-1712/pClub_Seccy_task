@@ -20,7 +20,7 @@ For example: Given N=2:<br>
 To achieve the maximum number of lights turned on, you need to determine the optimal sequence of switches to press.
 <br><br>
 <h3>Input</h3><br>
-A single natural number N (1 ≤ N < 10<sup>6</sup>, representing the number of switches.<br><br>
+A single natural number N (1 ≤ N < 10<sup>5</sup>, representing the number of switches.<br><br>
 <h3>Output</h3><br>
 The first line contains the maximum number of lights that can be turned on.<br>
 The second line contains the sequence of space-separated switch numbers that you need to press in ascending order to achieve this.<br><br>
