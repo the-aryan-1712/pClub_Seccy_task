@@ -13,15 +13,23 @@ I currently used dataset from https://oa.cc.iitk.ac.in which I found in Student 
 
 
 # Instructions for running code
-Open
+1. Open Gender_detection.ipynb collab file and run all cells. I've used data from my Google Drive folder, of which 20% I've used for validation. Select GPU accelerator while <br>
+running all cells. Once all cells will run completely then frag down to last cell which
 
 # Model in action
+<br>
+<br>
+This is Result for a particular image_index for which model is predicting correctly.<br><br><br>
 
 
 <img src="https://github.com/the-aryan-1712/pClub_Seccy_task/assets/156575544/38bc6bc3-4ebd-4c83-9880-442c30b7ba5d" height="600" width="1000" />
+<br><br>
+ This is a Accuracy v/s Epochs graph for the model. Validation accuracy is getting saturated somewhere below 1. <br><br><br>
 
 
 <img src="https://github.com/the-aryan-1712/pClub_Seccy_task/assets/156575544/d8e5160c-051c-4bae-96ac-de2529c4ae6a" height="600" width="1000" />
+<br><br>
+ This is a Loss v/s Epochs graph for the model. Validation Loss is reducing as we are increasing epoch size but after 15 epochs, Validation Loss is again increasing. But its good to go with 0.2 as I did it with comparitively less dataset.<br><br><br>
 
 
 <img src="https://github.com/the-aryan-1712/pClub_Seccy_task/assets/156575544/a5d3eea5-4d50-4100-bf20-9973744b8c7f" height="600" width="1000" />
