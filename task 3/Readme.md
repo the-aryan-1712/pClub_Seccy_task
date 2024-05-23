@@ -8,6 +8,25 @@
 I currently used dataset from https://oa.cc.iitk.ac.in which I found in Student Search Inspect. But Finding dataset was too tedious at first because what i initially did, I took a dataset from Google Dataset Search of masked persons which consisted of masked men and women intermixed. I separated that dataset manually into Men and Women and got 100 images data. And those pictures were of Chineese and Japanese Guys mostly. I trained my model on that dataset but since dataset was too less, I mixed 200 images of Asian people in that data. And that was the point my whole model ruined up, because my accuracy went too low. Then I clicked images of my wingies which took me to idea of using Student Search images data. And then I applied mask using a Github repo Mask_face and made a dictionary of  {Roll No,Gender}  using Student Search HTML page data.
 
 # Approach to problem
+Challenge: The mask obscures significant facial features, making gender classification challenging.<br><br>
+Loaded the dataset of masked images along each image having its name string as Roll Number. And imported csv files containing Roll number separated for girls and boys.<br>
+Standardized the image dimensions, Normalized pixel values and created a feature array of its greyscale image for reducing space and greyscale image perform better for CNN.<br>
+Split the dataset into training and validation in 80-20 ratio.
+### CNN Model Architecture :
+Made a shape matching the image dimensions and layers with increasing filter sizes. I used ReLU (Rectified Linear Unit) activation function and
+MaxPooling layers to reduce spatial dimensions. For preventing over-fitting I used Dropout Layers and Dense Fully Connected Layers to classify features. 
+For final Output Layer I used a sigmoid activation function for binary classification of (male/female),<br>
+which i finally round of and used gender{0:females,1:males}. I used Adam optimizer for efficient training of image dataset with Batch Size of 32 and Epochs 30,
+which was giving an excellent validation accuracy but validation loss <br> was increasing too. <br>
+I am still confused of what should we consider as first preference. callbacks were accurate though, as they were not changing graph much 
+
+
+
+
+Model plot of image processing layers used and dense layers for classification outputs <br><br>
+
+<img src="https://github.com/the-aryan-1712/pClub_Seccy_task/assets/156575544/ffe5f011-f1f5-4615-a915-856bb98797f6" height="600" width="250" />
+
 
 
 
