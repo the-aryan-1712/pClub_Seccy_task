@@ -13,8 +13,22 @@ I currently used dataset from https://oa.cc.iitk.ac.in which I found in Student 
 
 
 # Instructions for running code
-1. Open Gender_detection.ipynb file in collab and run all cells. I've used data from my Google Drive folder, of which 20% I've used for validation. Select GPU accelerator while <br>
-running all cells. Once all cells will run completely then frag down to last cell which
+1. Open the Google Drive link for dataset (which I've given access to write anyone with link) and move it to your Google Drive.
+2. Open Gender_detection.ipynb file in collab and run first two cells, Second cell is for mounting Google Drive with Collab.
+3. After Mounting your Drive, Go to /content/drive/MyDrive/   and find the dataset folder. Copy its path and paste it in 3<sup>rd</sup> cell --> WithMask = 'paste_here' and run cell.
+4. After that run all cells. I've used data from my Google Drive folder, of which 20% I've used for validation. Select GPU accelerator while <br>
+running all cells.
+5. Once all cells will run completely then scroll down to last cell which has a gradio link for Gender Prediction Interface.
+6. Enter Image index between (0 to 1200) for particular prediction.
+7. I gradio link expires then create a new cell below it and run the following code with own choice of image_index :         <br>         <br>         <br>
+image_index = 700           <br>
+print("Original Gender:", gender_dict[WithMask_y[image_index]])         <br>
+pred = model.predict(WithMask_X[image_index].reshape(1, 128, 128, 1))         <br>
+pred_gender = gender_dict[round(pred[0][0][0])]         <br>
+pred_age = round(pred[1][0][0])         <br>
+print("Predicted Gender:", pred_gender)         <br>
+plt.axis('off')         <br>
+plt.imshow(X[image_index].reshape(128, 128), cmap='gray');         <br>         <br>         <br>
 
 # Model in action
 <br>
